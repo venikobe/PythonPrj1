@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container py-5">
+    <p>{{question}}</p>
+    <div class="row justify-content-center">
+    <h1>{{answer}}</h1>
+    <p></p>
+    <a href={% url 'app1:task' %} class="btn btn-outline-success btn-lg" role="button">Решить снова</a>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,8 @@
+{% extends '3base.html' %}
+{% block content%}
+
+<div class="card-body">
+            <h5 class="card-title text-center">{% autoescape off %}{{ contentObject.PageUrl }}{% endautoescape %}</h5>
+            {% autoescape off %}{{ contentObject.PageContent }}{% endautoescape %}
+        </div>
+{% endblock %}

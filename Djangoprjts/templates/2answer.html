@@ -1,0 +1,27 @@
+{% extends '2base.html' %}
+{% block content %}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <table border="1">
+            <tr>
+              <td>Вопрос</td>
+              <td>Записи о переработках</td>
+              <td>Требуемый день</td>
+              <td>Результат</td>
+              <td>Дата изменения</td>
+            </tr>
+            <tr>
+              <td>{{model.question}}</td>
+              <td>{{model.input}}</td>
+              <td>{{model.day}}</td>
+              <td>{{model.result}}</td>
+              <td>{{model.currentime}}</td>
+            </tr>
+          </table>
+    <p></p>
+    <a href={% url 'app02:task' %} class="btn btn-outline-success btn-lg" role="button">Решить снова</a>
+    </div>
+</div>
+
+{% endblock %}

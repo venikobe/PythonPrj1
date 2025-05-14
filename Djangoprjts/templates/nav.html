@@ -1,0 +1,22 @@
+<header>
+  <nav class="navbar navbar-light" style="background-color: rgb(255, 255, 255)">
+    <div class="container">
+      {% with request.resolver_match.view_name as view_name %}
+      <ul class="nav nav-pills">
+        <li class="nav-item"> 
+          <a class="nav-link {% if view_name  == 'app1:main' %}link-light active{% else %}text-dark{% endif %}" href="{% url 'app1:main' %}">Главная страница</a>
+        </li>
+        <li class ="nav-item">  
+          <a class="nav-link" href="{% url 'app1:about'%}">Я и моя образовательня программа</a>
+        </li>
+        <li class="nav-item"> 
+          <a class="nav-link {% if view_name  == 'app1:task' %}link-light active{% else %}text-dark{% endif %}" href="{% url 'app1:task' %}">Задача про годы</a>
+        </li>
+        <li class="nav-item"> 
+            <a class="nav-link text-dark" href="https://6x-77-76.github.io/gfiles/spinningrat/" target="_blank" rel="noopener noreferrer">Крутая крыска</a>
+          </li> 
+      </ul>
+      {% endwith %}
+    </div>
+  </nav>      
+</header> 

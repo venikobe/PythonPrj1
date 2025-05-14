@@ -1,0 +1,14 @@
+{% extends '2base.html' %}
+{% block content %}
+
+<div class="container py-5">
+
+    <form action="{% url 'app02:task' %}" method="post">
+        {% csrf_token %}
+        <p>Сколько записей о переработках в день Х?</p>
+        <p>{{form}}</p>
+    <input type="submit" value="Получить ответ">
+    </form>
+</div>
+
+{% endblock %}

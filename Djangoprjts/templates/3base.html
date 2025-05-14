@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>    
+    <meta charset="utf-8">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div class="card">
+        <div class="card-body">
+            <ul class="nav nav-tabs">
+                {% for object in navObjects %}
+                    <li class="nav-item">
+                        <a class="nav-item" href="{% url 'wiki:page' pk=object.PagePriority %}">{{ object.PageUrl}}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+      </div>
+      <main>
+      {% block content%}
+      {% endblock %}
+    </main>
+  </body>
+</html>
